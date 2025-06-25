@@ -6,6 +6,11 @@ import pytesseract
 from gtts import gTTS
 import io
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+apiKey = os.getenv("API_KEY")
 
 # Set path to Tesseract
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -62,7 +67,7 @@ def explain_in_hindi_groq(ocr_text):
 उत्तर (सरल हिंदी में):
 """
     headers = {
-        "Authorization": f"Bearer {"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"}",
+        "Authorization": f"Bearer {apiKey}",
         "Content-Type": "application/json"
     }
 
