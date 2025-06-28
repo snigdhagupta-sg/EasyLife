@@ -7,6 +7,7 @@ from gtts import gTTS
 import io
 import requests
 import os
+from app.api.routes import router as api_router
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -85,3 +86,6 @@ def explain_in_hindi_groq(ocr_text):
     else:
         print("Groq Error:", response.text)
         return "❌ Unable to explain the document."
+
+
+app.include_router(api_router, prefix="/api")
