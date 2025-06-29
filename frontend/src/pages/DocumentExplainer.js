@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import styles from '../styles/DocumentExplainer.module.css'; // Adjust the path as necessary
 
+//Document Explainer
 const DocumentExplainer = () => {
   const [audioURL, setAudioURL] = useState(null);
   const [explanation, setExplanation] = useState("");
@@ -132,7 +133,7 @@ const DocumentExplainer = () => {
               हिंदी में विस्तृत व्याख्या के लिए बैंकिंग या वित्तीय दस्तावेज़ अपलोड करें
             </p>
           </div>
-
+          {/*Card Content*/ }
           <div className={styles.cardContent}>
             <div
               className={`${styles.uploadZone} ${
